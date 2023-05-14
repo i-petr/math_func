@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        JS2
+    </title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        function getRandomNumber () {
+            const num_random = Math.round(Math.random()*10)
+            return num_random
+        }
+
+        let number_random = getRandomNumber()
+
+        let ugadai = prompt("Угадай число от 1 до 10")
+        if (number_random > ugadai) {
+            alert(`Твое число меньше ${console.log = (number_random)}`)
+        }
+
+        if (number_random < ugadai) {
+            alert(`Твое число больше ${console.log = (number_random)}`)
+        }
+
+        if (number_random == ugadai) {
+            alert(`Ты красавчик! Твое число совпало с ${console.log = (number_random)}!`)
+        }
+    </script>
+</html>
