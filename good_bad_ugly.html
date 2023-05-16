@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS2
+        </title>
+        <style>
+            div {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2 id="man-name"></h2>
+            <h2 id="man-name2"></h2>
+            <h2 id="man-name3"></h2>
+        </div>
+        <div>
+            <p id="other"></p>
+            <p id="other2"></p>
+            <p id="other3"></p>
+        </div>
+    </body>
+    <script>
+        let goodMan = {
+            name: "Хороший",
+            health: "",
+            damage: "",
+            defense: "",
+        }
+
+        let badMan = {
+            name: "Плохой",
+            health: "",
+            damage: "",
+            defense: "",
+        }
+
+        let evilMan = {
+            name: "Злой",
+            health: "",
+            damage: "",
+            defense: "",
+        }
+
+        goodMan.health = +prompt("Введи количество здоровья для Хорошего Парня")
+        goodMan.damage = +prompt("Введи количество атаки для Хорошего Парня")
+        goodMan.defense = +prompt("Введи количество защиты для Хорошего Парня")
+
+        badMan.health = +prompt("Введи количество здоровья для Плохого Парня")
+        badMan.damage = +prompt("Введи количество атаки для Плохого Парня")
+        badMan.defense = +prompt("Введи количество защиты для Плохого Парня")
+
+        evilMan.health = +prompt("Введи количество здоровья для Злого Парня")
+        evilMan.damage = +prompt("Введи количество атаки для Злого Парня")
+        evilMan.defense = +prompt("Введи количество защиты для Злого Парня")
+
+        function getWinPoints(totalScoreMan) {
+            let itog = totalScoreMan.health + totalScoreMan.damage + totalScoreMan.defense
+            return itog
+        }
+
+        let totalGood = getWinPoints(goodMan)
+        let totalBad = getWinPoints(badMan)
+        let totalEvil = getWinPoints(evilMan)
+
+
+
+        const nameElement = document.getElementById("man-name")
+        nameElement.innerHTML = goodMan.name
+
+        const otherElement = document.getElementById("other")
+        otherElement.innerHTML = `Всего очков: ${totalGood}`
+
+        const nameElement2 = document.getElementById("man-name2")
+        nameElement2.innerHTML = badMan.name
+
+        const otherElement2 = document.getElementById("other2")
+        otherElement2.innerHTML = `Всего очков: ${totalBad}`
+
+        const nameElement3 = document.getElementById("man-name3")
+        nameElement3.innerHTML = evilMan.name
+
+        const otherElement3 = document.getElementById("other3")
+        otherElement3.innerHTML = `Всего очков: ${totalEvil}`
+    </script>
+</html>
