@@ -9,12 +9,12 @@
 
     </body>
     <script>
-        function getRandomNumber () {
-            const num_random = Math.round(Math.random()*10)
+        function getRandomNumber (numRandom) {
+            const num_random = Math.round(Math.random()*numRandom)
             return num_random
         }
 
-        let number_random = getRandomNumber()
+        let number_random = getRandomNumber(10)
 
         let ugadai = prompt("Угадай число от 1 до 10")
         if (number_random > ugadai) {
